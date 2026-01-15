@@ -1,164 +1,67 @@
-
 body {
     background-color: #061E29;
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 20px;
+    text-align: center;
 }
+
 .logos {
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.808);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    margin-bottom: 25px;
+    max-width: 1100px;
+    margin: 0 auto 25px;
+    border-bottom: 1px solid rgba(255,255,255,.6);
+    padding-bottom: 15px;
 }
-.logo{
-    max-width: 50px;
-    width: 100%;
-    height: auto;
+
+.logo {
+    max-width: 80px;
+    margin: auto;
 }
+
 
 .flex-center {
     max-width: 900px;
     margin: auto;
 }
-
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 .banner {
     width: 100%;
     max-height: 420px;
     object-fit: cover;
     border-radius: 12px;
-    margin-bottom: 20px;
 }
+
 .titulo-cr {
     font-family: 'Luckiest Guy', cursive;
     font-size: clamp(32px, 6vw, 64px);
-    color: #ffffff;
-    text-align: center;
-    letter-spacing: 2px;
+    color: #fff;
     margin: 20px 0;
-
-    text-shadow:
-        3px 3px 0 #1a1a1a,
-        6px 6px 0 #000;
+    text-shadow: 3px 3px 0 #000;
 }
 
-h1, h2 {
-    color: #f2eeee;
-}
-h3{
-    text-align: center;
-    color: #000000;
-}
 p {
+    color: #eee;
     font-size: 18px;
-    color: #f5efef;
 }
 
-.reglas {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
+.titulo-seccion {
+    margin-top: 60px;
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
     margin-top: 40px;
 }
 
-.card {
-    background-color: #0b2b3a;
-    padding: 25px;
-    border-radius: 12px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* CENTRA imagen y botón */
-}
-
-
-.imagen {
-    width: 100%;
-    max-width: 260px;
-    margin-bottom: 15px;
-}
-.imagen{
-    transition: transform 0.3s ease;
-}
-.imagen:hover {
-    transform: scale(1.09);
-}
-.banner{
-    transition: transform 0.3s ease;
-}
-.banner:hover {
-    transform: scale(1.02);
-}
-
-.descripcion {
-    display: none;
-    margin-top: 15px;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: left;
-    width: 100%;
-    max-width: 320px;
-}
-
-button {
-    align-items: center;
-    appearance: none;
-    background-color: #EEF2FF;
-    border-radius: 8px;
-    border-width: 2px;
-    border-color: #536DFE;
-    box-shadow: rgba(83, 109, 254, 0.2) 0 2px 4px,
-                rgba(83, 109, 254, 0.15) 0 7px 13px -3px,
-                #D6D6E7 0 -3px 0 inset;
-    box-sizing: border-box;
-    color: #536DFE;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: "JetBrains Mono", monospace;
-    height: 56px;
-    justify-content: center;
-    line-height: 1;
-    list-style: none;
-    overflow: hidden;
-    padding-left: 24px;
-    padding-right: 24px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    transition: box-shadow 0.15s, transform 0.15s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    will-change: box-shadow, transform;
-    font-size: 20px;
-}
-
-.button:focus {
-    outline: none;
-    box-shadow: #D6D6E7 0 0 0 1.5px inset,
-                rgba(83, 109, 254, 0.4) 0 2px 4px,
-                rgba(83, 109, 254, 0.3) 0 7px 13px -3px,
-                #D6D6E7 0 -3px 0 inset;
-}
-
-.button:hover {
-    box-shadow: rgba(83, 109, 254, 0.3) 0 4px 8px,
-                rgba(83, 109, 254, 0.2) 0 7px 13px -3px,
-                #D6D6E7 0 -3px 0 inset;
-    transform: translateY(-2px);
-}
-
-.button:active {
-    box-shadow: #D6D6E7 0 3px 7px inset;
-    transform: translateY(2px);
-}
-
+/* From Uiverse.io by mi-series */ 
 .btn {
   outline: 0;
   display: inline-flex;
@@ -198,32 +101,114 @@ button {
     box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
   }
 }
-@media (min-width: 768px) {
-    .logos {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        align-items: center;
-        max-width: 1100px;
-        margin: 0 auto 30px;
-    }
 
-    .logo-left {
-        justify-self: start;
-    }
-
-    .logo-center {
-        justify-self: center;
-        max-width: 140px;
-    }
-
-    .logo-right {
-        justify-self: end;
-    }
-
-    .logo {
-        max-width: 120px;
-    }
+.reglas {
+    margin-top: 50px;
+    display: grid;
+    gap: 40px;
 }
 
+.card {
+    background: #0b2b3a;
+    padding: 25px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .8s ease;
+}
 
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
+.imagen {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.contenido {
+    max-width: 500px;
+    width: 100%;
+}
+
+.titulo-regla {
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.descripcion {
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.descripcion ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.descripcion li {
+    margin-bottom: 5px;
+}
+
+.descripcion h3 {
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    .reglas {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .card {
+        max-width: 900px;
+        width: 100%;
+        min-height: 340px;
+        margin: 0 auto;
+        padding: 30px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+    .imagen {
+        max-width: 180px;
+        min-width: 180px;
+        width: 180px;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .card:nth-child(odd) {
+        flex-direction: row;
+    }
+
+    .contenido {
+        max-width: 500px;
+        flex: 1;
+    }
+
+    .titulo-regla {
+        font-size: 24px;
+    }
+}

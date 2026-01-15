@@ -1,9 +1,15 @@
-document.querySelectorAll(".toggle-btn").forEach(boton => {
-    boton.addEventListener("click", () => {
-        const id = boton.dataset.target;
-        const descripcion = document.getElementById(id);
+const cards = document.querySelectorAll(".card");
 
-        descripcion.style.display =
-            descripcion.style.display === "block" ? "none" : "block";
-    });
-});
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    },
+    {
+        threshold: 0.2
+    }
+);
+cards.forEach(card => observer.observe(card));
