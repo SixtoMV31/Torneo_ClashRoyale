@@ -164,6 +164,8 @@ h2 {
 .descripcion h3 {
     margin: 10px 0 5px 0;
     font-size: 16px;
+    font-size: 16px;
+    color: white;
 }
 
 @media (min-width: 768px) {
